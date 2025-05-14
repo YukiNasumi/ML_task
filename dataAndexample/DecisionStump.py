@@ -44,9 +44,9 @@ class DecisionStump:
         self.alpha = 0.5 * np.log((1 - min_error) / (min_error + 1e-10))  # 避免除以0
 
     def predict(self, X):
-        # 根据训练好的参数预测
-        predictions = np.where(
+        if self.feature_idx is None or self.threshold is None:
+            return np.random.choice([-1, 1], size=X.shape[0])  # 返回随机预测
+        return np.where(
             self.polarity * X[:, self.feature_idx] <= self.polarity * self.threshold,
             1, -1
         )
-        return predictions
