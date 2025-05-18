@@ -1,4 +1,4 @@
-from DecisionStump import DecisionStump
+from DecisionStump2 import DecisionStump
 import numpy as np
 class AdaBoost:
     def __init__(self, n_estimators=50):
