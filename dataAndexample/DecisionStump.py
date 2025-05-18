@@ -41,7 +41,7 @@ class DecisionStump:
                         self.polarity = polarity
 
         # 计算分类器权重（用于AdaBoost）
-        self.alpha = 0.5 * np.log((1 - min_error) / (min_error + 1e-10))  # 避免除以0
+        #self.alpha = 0.5 * np.log((1 - min_error) / (min_error + 1e-10))  # 避免除以0
 
     def predict(self, X):
         if self.feature_idx is None or self.threshold is None:
