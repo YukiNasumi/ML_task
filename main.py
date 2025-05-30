@@ -19,9 +19,9 @@ def main():
         target_dir+='/'
     if not os.path.exists(target_dir):
         os.mkdir(target_dir)
-    data = np.genfromtxt('data.csv',dtype=float,delimiter=',')
+    data = np.genfromtxt('data/data.csv',dtype=float,delimiter=',')
     fold_length = int(data.shape[0]/fold_num)
-    label = np.genfromtxt('targets.csv',dtype=int,delimiter=',')
+    label = np.genfromtxt('data/targets.csv',dtype=int,delimiter=',')
     for base_num in base_list:
         print(f'base num = {base_num}.\nNow begin to train and test')
         for fold in range(1,fold_num+1):

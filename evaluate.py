@@ -1,6 +1,6 @@
 import numpy as np
 import argparse
-target = np.genfromtxt('targets.csv')
+target = np.genfromtxt('data/targets.csv')
 base_list = [1, 5, 10, 100]
 parser = argparse.ArgumentParser()
 parser.add_argument('--t',type=str,required=False,default='experiments/')
