@@ -1,9 +1,9 @@
-# 使用及文档说明
+# 2025春季机器学习大作业使用说明
 
 ## 文件组织
-- AdaBoostx.py,DecisonStumpx.py和main.py放在一个目录下
+- AdaBoostx.py,DecisonStumpx.py,LogisticRegressionBase.py和main.py放在一个目录下
 - 数据集data.csv共3680条，50个列
-- target是3680条数据的ground truth
+- targets.csv是3680条数据的ground truth
 - data.csv,target.csv自行放入data/下
 
 ![target.csv数据分布](images/target.png)
@@ -28,3 +28,4 @@ python evaluate.py --t your_target_dir/
 
 ## 使用历史算法
 在main.py中修改import的AdaBoostx，可以使用其他版本的算法
+**提交的版本中没有除AdaBoost7,AdaBoost9以外的部分。**

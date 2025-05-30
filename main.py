@@ -34,6 +34,7 @@ def main():
                 classifier = AdaBoost9.AdaBoost(base_num)
             else:
                 print('please input correct command line argument,--m 0 or --m 1')
+                return
 
             print(f'base{base_num}fold{fold},please waiting...')
             x_train = np.concatenate((data[:(fold-1)*fold_length] ,
