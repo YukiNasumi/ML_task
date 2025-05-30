@@ -4,10 +4,7 @@
 - AdaBoostx.py,DecisonStumpx.py和main.py放在一个目录下
 - 数据集data.csv共3680条，50个列
 - target是3680条数据的ground truth
-<<<<<<< HEAD
 - data.csv,target.csv自行放入data/下
-=======
->>>>>>> e0404387f530dd4a7f5d275e48e02e921777b32b
 
 ![target.csv数据分布](images/target.png)
 
