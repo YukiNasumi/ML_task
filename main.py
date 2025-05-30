@@ -1,5 +1,6 @@
 import numpy as np
-from AdaBoost9 import AdaBoost
+import AdaBoost7
+import AdaBoost9
 import pandas as pd
 import argparse
 import os
@@ -11,10 +12,12 @@ def adapt(predictions):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--t',type=str,required=False,default='experiments/')
+    parser.add_argument('--m',type=int,required=False,default=0)
     args = parser.parse_args()
     fold_num = 10
     base_list = [1, 5, 10, 100]
     target_dir = args.t
+    m = args.m
     if not target_dir[-1]=='/':
         target_dir+='/'
     if not os.path.exists(target_dir):
@@ -25,7 +28,13 @@ def main():
     for base_num in base_list:
         print(f'base num = {base_num}.\nNow begin to train and test')
         for fold in range(1,fold_num+1):
-            classifier = AdaBoost(n_estimators=base_num)
+            if m==0:
+                classifier =AdaBoost7.AdaBoost(n_estimators=base_num)
+            elif m==1:
+                classifier = AdaBoost9.AdaBoost(base_num)
+            else:
+                print('please input correct command line argument,--m 0 or --m 1')
+
             print(f'base{base_num}fold{fold},please waiting...')
             x_train = np.concatenate((data[:(fold-1)*fold_length] ,
                                      data[(fold)*fold_length:]),axis=0)#if not fold==1 else data[fold*fold_length:]
