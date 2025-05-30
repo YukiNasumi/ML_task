@@ -5,7 +5,7 @@
 - 数据集data.csv共3680条，50个列
 - target是3680条数据的ground truth
 - data.csv,target.csv自行放入data/下
-- 
+
 ![target.csv数据分布](images/target.png)
 
 ## 测试和评估方法
