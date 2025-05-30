@@ -1,7 +1,7 @@
 import numpy as np
 
 class LogisticRegression:
-    def __init__(self, learning_rate=0.01, max_iter=1000, tol=1e-4, verbose=False):
+    def __init__(self, learning_rate=0.001, max_iter=1000, tol=1e-4, verbose=False):
         """
         优化的对数几率回归实现
 
