@@ -1,5 +1,5 @@
 import numpy as np
-from AdaBoost5 import AdaBoost
+from AdaBoost7 import AdaBoost
 import pandas as pd
 import argparse
 import os
